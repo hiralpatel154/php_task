@@ -110,6 +110,7 @@ Simple CRUD
 			  
 11. display/view.php
 	<?php
+
 		include('conn.php');
 		$dpsql = "SELECT * FROM user_table";
 		$result=mysqli_query($conn, $dpsql);
@@ -137,21 +138,22 @@ Simple CRUD
 					</table>
 				</div>';
 			}
+
 		}
 	?>
 	
-12. insert.php
+13. insert.php
 	if($query_run){
 		// echo "Data is inserted successfully";
 		header('location:display.php');
 	}
 	
-13. display.php --  url for delete user
+14. display.php --  url for delete user
 	<button class="btn btn-danger">
 		<a href="delete.php?deleteid='.$id.'" class="text-light text-decoration-none">Delete</a>
 	</button>
 
-14. delete.php - DELETE Query
+15. delete.php - DELETE Query
 	<?php
 		include('conn.php');
 		if(isset($_GET['deleteid'])){
@@ -168,14 +170,14 @@ Simple CRUD
         }
 	?>
 	
-15. UPDATE User
+16. UPDATE User
 	display.php - url for update user
 	<button class="btn btn-primary">
 		<a href="update.php?updateid='.$id.'" class="text-light text-decoration-none">Update</a>
 	</button>
 	
 
-16. update.php - Get update user details
+17. update.php - Get update user details
 	<?php
 		include('conn.php');
 		$id = $_GET['updateid'];
@@ -188,7 +190,7 @@ Simple CRUD
 		$course = $row['course'];
 	?>
 	
-17. update.php - give value
+18. update.php - give value
 	<form method="post">
 		<label for="name">User Name</label>
 		<input type="text" name="name" value=<?php echo $name ?> class="form-control">
@@ -201,7 +203,7 @@ Simple CRUD
 		</select>
 	</form>
 	
-18. update.php - UPDATE Query
+19. update.php - UPDATE Query
 	if (isset($_POST['submit'])) {
 		$name = $_POST['name'];
 		$email = $_POST['email'];
