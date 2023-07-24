@@ -1,6 +1,3 @@
-# php_task
-Simple CRUD
-
 1. xampp server
 2. c:xampp/htdocs/php_task
 3. index.php
@@ -108,8 +105,9 @@ Simple CRUD
 		die(mysqli_error($conn));
 	}
 			  
-11. display/view.php
-include('conn.php');
+11. display/view.php --> 
+	<?php
+		include('conn.php');
 		$dpsql = "SELECT * FROM user_table";
 		$result=mysqli_query($conn, $dpsql);
 		if($result){
@@ -136,21 +134,21 @@ include('conn.php');
 					</table>
 				</div>';
 			}
-
 		}
+	?>
 	
-13. insert.php
+12. insert.php
 	if($query_run){
 		// echo "Data is inserted successfully";
 		header('location:display.php');
 	}
 	
-14. display.php --  url for delete user
+13. display.php --  url for delete user
 	<button class="btn btn-danger">
 		<a href="delete.php?deleteid='.$id.'" class="text-light text-decoration-none">Delete</a>
 	</button>
 
-15. delete.php - DELETE Query
+14. delete.php - DELETE Query
 	<?php
 		include('conn.php');
 		if(isset($_GET['deleteid'])){
@@ -167,14 +165,14 @@ include('conn.php');
         }
 	?>
 	
-16. UPDATE User
+15. UPDATE User
 	display.php - url for update user
 	<button class="btn btn-primary">
 		<a href="update.php?updateid='.$id.'" class="text-light text-decoration-none">Update</a>
 	</button>
 	
 
-17. update.php - Get update user details
+16. update.php - Get update user details
 	<?php
 		include('conn.php');
 		$id = $_GET['updateid'];
@@ -187,7 +185,7 @@ include('conn.php');
 		$course = $row['course'];
 	?>
 	
-18. update.php - give value
+17. update.php - give value
 	<form method="post">
 		<label for="name">User Name</label>
 		<input type="text" name="name" value=<?php echo $name ?> class="form-control">
@@ -200,7 +198,7 @@ include('conn.php');
 		</select>
 	</form>
 	
-19. update.php - UPDATE Query
+18. update.php - UPDATE Query
 	if (isset($_POST['submit'])) {
 		$name = $_POST['name'];
 		$email = $_POST['email'];
