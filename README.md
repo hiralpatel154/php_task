@@ -1,7 +1,10 @@
 # php_task
 Simple CRUD
+
 Command to find IP address of your PC - ipconfig
+
 install xampp or mysql installer
+
 Extensions in VScode - Prettier, Format HTML in PHP, PHP Debug, PHP Intelephense
 
 
