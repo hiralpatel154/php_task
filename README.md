@@ -109,9 +109,7 @@ Simple CRUD
 	}
 			  
 11. display/view.php
-	<?php
-
-		include('conn.php');
+include('conn.php');
 		$dpsql = "SELECT * FROM user_table";
 		$result=mysqli_query($conn, $dpsql);
 		if($result){
@@ -140,7 +138,6 @@ Simple CRUD
 			}
 
 		}
-	?>
 	
 13. insert.php
 	if($query_run){
