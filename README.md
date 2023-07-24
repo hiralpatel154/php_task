@@ -14,7 +14,8 @@ Extensions in VScode - Prettier, Format HTML in PHP, PHP Debug, PHP Intelephense
 	
 4. Creating database & table using MySQLi Procedure-oriented Procedure
 	conn.php
-		     <?php
+
+   		<?php
 			$servername = "localhost";
 			$username="root";
 			$password="";
@@ -42,18 +43,18 @@ Extensions in VScode - Prettier, Format HTML in PHP, PHP Debug, PHP Intelephense
 			mysqli_close($conn);
 		     ?>
 	
-5. student.php
+6. student.php
 	<?php
 		include('conn.php');
 	?>
 	
-6. in browser,
+7. in browser,
 	http://localhost/php_task/student.php
 	
 	http://localhost/phpmyadmin
 	
-7. Comment mysqli_error($conn) echo statement in else part 
+8. Comment mysqli_error($conn) echo statement in else part 
    Comment mysqli_close($conn) in conn.php;
 	
-8. jQuery CDN link - minified version
+9. jQuery CDN link - minified version
 	add at the end of body tag
